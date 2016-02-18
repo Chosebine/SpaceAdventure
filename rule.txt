@@ -5,10 +5,13 @@ action
 
 	standard action
 	    attack
+	    use general equipment
+
 
 	complex action
 	    full auto attack
 	    ram
 	    full defense
+	    dock
 
 
