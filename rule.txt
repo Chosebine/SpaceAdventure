@@ -4,4 +4,11 @@ action
 	    evasive maneuver (necessite jet de pilotage)
 
 	standard action
+	    attack
+
 	complex action
+	    full auto attack
+	    ram
+	    full defense
+
+
