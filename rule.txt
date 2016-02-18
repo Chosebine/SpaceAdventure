@@ -13,6 +13,6 @@ action
 	    ram
 	    full defense
 	    dock
-	    use
+	    use tractor beam
 
 
