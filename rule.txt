@@ -1,0 +1,7 @@
+action
+	move action
+	    simple move
+	    evasive maneuver (necessite jet de pilotage)
+
+	standard action
+	complex action

@@ -1,0 +1,28 @@
+Hull
+	size
+	hit point
+	speed penality #modifie le nb de move
+	maneuverability #modifie le jet de pilotage
+	description
+
+Propulsion
+	tactical speed  #nb de carre par move action
+	minimum size
+	maneuvarability #modifie le jet de pilotage
+	description
+	
+
+Sensor
+
+Life System
+
+Cargo
+
+Defense System
+
+Weapon System
+
+General Equipment
+
+
+
