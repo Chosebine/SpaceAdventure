@@ -11,28 +11,17 @@ Hull
 	description
 	type
 	subtype
-
-
-Propulsion
+Engine
 	tactical speed  #nb de carre par move action
 	minimum size
 	maneuvarability #modifie le jet de pilotage
 	description
-	
-
 Sensor
-
 Communication
-
-
 Life System
-
 Cargo
-
 Defense System
-
 Weapon System
-
 General Equipment
 
 

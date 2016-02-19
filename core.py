@@ -11,10 +11,12 @@ class Size(object):
 
 class Hull(object):
     """the hull part of a starship"""
-    def __init__(self, name,description, hit_point):
+    def __init__(self, name,description, hit_point,speedpenalty):
         self.name = name
         self.description = description
         self.hitPoint = hit_point
+        self.speedPenalty = speedpenalty
+
 
 
 
@@ -36,8 +38,9 @@ class Starship(object):
         self.hull = Hull
         self.armor = Armor
 
+
 taille = Size("ultralight","a very small ship", 0.25)
-ahull = Hull("vanadium hull","this is a basic hull", 50)
+ahull = Hull("vanadium hull","this is a basic hull", 50,-2)
 armortst= Armor("tiberium","this tiberium armor is blabla",30,0.4,-3)
 falcon = Starship("millenium","the fastest",taille,ahull,armortst)
-print(falcon.armor.name)
+#print(falcon.armor.name)
