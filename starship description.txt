@@ -1,9 +1,17 @@
 Hull
 	size
+	    ultralight
+	    light
+	    mediumweight
+	    heavy
+	    superheavy
 	hit point
 	speed penality #modifie le nb de move
 	maneuverability #modifie le jet de pilotage
 	description
+	type
+	subtype
+
 
 Propulsion
 	tactical speed  #nb de carre par move action
@@ -13,6 +21,9 @@ Propulsion
 	
 
 Sensor
+
+Communication
+
 
 Life System
 
