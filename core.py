@@ -13,6 +13,15 @@ class Size(object):
         self.weight = weight
 
 
+class StarshipType(object):
+    """defined type of starship"""
+
+    def __init__(self,name, description, fighting_square):
+        self.name = name
+        self.description = description
+        self.fightingSquare = fighting_square
+
+
 class Crew(object):
     """The crew of a starship"""
 
@@ -48,9 +57,10 @@ class Armor(object):
 class Starship(object):
     """this is a starship object"""
 
-    def __init__(self, name, description, Size, Hull, Armor, equip, posx, posy,base_speed):
+    def __init__(self, name, description, StarshipType, Size, Hull, Armor, equip, posx, posy,base_speed):
         self.name = name
         self.description = description
+        self.starshiptype = StarshipType
         self.size = Size
         self.hull = Hull
         self.armor = Armor
@@ -61,10 +71,10 @@ class Starship(object):
 
 
 equipage = Crew("ace", 4, 5, 2, 4, 23)
-
+atype= StarshipType("lightweight","un genre de petit vaisseau",1)
 taille = Size("huge",-2,5,6,64,256000)
 ahull = Hull("vanadium hull", "this is a basic hull", 50, )
 armortst = Armor("tiberium", "this tiberium armor is blabla", 30, 0.4, -3)
-falcon = Starship("millenium", "the fastest", taille, ahull, armortst, equipage, 0, 0,6)
+falcon = Starship("millenium", "the fastest", atype,taille, ahull, armortst, equipage, 0, 0,6)
 print(falcon.armor.name)
-print(falcon.equip.quality,falcon.size.name)
+print(falcon.equip.quality,falcon.starshiptype.description)
