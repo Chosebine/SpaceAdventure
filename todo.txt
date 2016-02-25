@@ -1,0 +1,12 @@
+creer une base de donnees sqlite3 contenant les info de base
+object champ de bataille
+    responsable de l'evolution du combat
+    contient la liste des protagonistes
+    l'object carte
+
+Interface
+    donnees du vaisseau
+    champs de bataille
+    etc
+
+

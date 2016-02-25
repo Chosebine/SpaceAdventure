@@ -78,10 +78,11 @@ class Weapon(object):
 class Starship(object):
     """this is a starship object"""
 
-    def __init__(self, name, description, starship_type, size, hull, armor, weapon, crew, position, base_speed):
+    def __init__(self, name, description, starship_type,starship_subtype, size, hull, armor, weapon, crew, position, base_speed):
         self.name = name
         self.description = description
         self.starshipType = starship_type
+        self.starshipSubtype = starship_subtype
         self.size = size
         self.hull = hull
         self.armor = armor
@@ -98,7 +99,7 @@ place = Position(0, 0)
 ahull = Hull("vanadium hull", "this is a basic hull", 50, )
 armortst = Armor("tiberium", "this tiberium armor is blabla", 30, 0.4, -3)
 arme = Weapon("blaster", "classic starwars blaster cannon", 42, 19, "energy", 2, 1, taille, 11)
-falcon = Starship("millenium", "the fastest", atype, taille, ahull, armortst, arme, equipage, place, 6)
-print(falcon.armor.name)
+falcon = Starship("millenium", "the fastest", atype,"transport", taille, ahull, armortst, arme, equipage, place, 6)
+"""print(falcon.armor.name)
 print(falcon.crew.quality, falcon.starshipType.description, falcon.weapon.name)
-print(falcon.baseSpeed)
+print(falcon.baseSpeed)"""
