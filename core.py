@@ -13,6 +13,15 @@ class Size(object):
         self.weight = weight
 
 
+class Position(object):
+    """Basic 2d position in space"""
+
+    def __init__(self,posx,posy):
+        self.posX = posx
+        self.posY = posy
+
+
+
 class StarshipType(object):
     """defined type of starship"""
 
@@ -61,7 +70,7 @@ class Weapon(object):
         self.damage = damage
         self.crit = crit
         self.dmgeType = dmg_type
-        self.wepnRange = wpn_range
+        self.wpnRange = wpn_range
         self.rof = rof
         self.minShipSize = min_ship_size
         self.price = price
@@ -70,7 +79,7 @@ class Weapon(object):
 class Starship(object):
     """this is a starship object"""
 
-    def __init__(self, name, description, StarshipType, Size, Hull, Armor, Weapon, equip, posx, posy,base_speed):
+    def __init__(self, name, description, StarshipType, Size, Hull, Armor, Weapon, Crew, Position, base_speed):
         self.name = name
         self.description = description
         self.starshipType = StarshipType
@@ -78,18 +87,19 @@ class Starship(object):
         self.hull = Hull
         self.armor = Armor
         self.weapon = Weapon
-        self.equip = equip
-        self.posx = posx
-        self.posy = posy
+        self.crew = Crew
+        self.position = Position
         self.baseSpeed = base_speed
 
 
 equipage = Crew("ace", 4, 5, 2, 4, 23)
 atype= StarshipType("lightweight","un genre de petit vaisseau",1)
 taille = Size("huge",-2,5,6,64,256000)
+place= Position(0,0)
 ahull = Hull("vanadium hull", "this is a basic hull", 50, )
 armortst = Armor("tiberium", "this tiberium armor is blabla", 30, 0.4, -3)
 arme= Weapon("blaster","classic starwars blaster cannon",42,19,"energy",2,1,taille,11)
-falcon = Starship("millenium", "the fastest", atype,taille, ahull, armortst,arme, equipage, 0, 0,6)
+falcon = Starship("millenium", "the fastest", atype,taille, ahull, armortst,arme, equipage, place, 6)
 print(falcon.armor.name)
-print(falcon.equip.quality,falcon.starshipType.description,falcon.weapon.name)
+print(falcon.crew.quality,falcon.starshipType.description,falcon.weapon.name)
+print(falcon.baseSpeed)
