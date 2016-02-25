@@ -1,5 +1,5 @@
 __author__ = 'mathieu'
-import random
+
 
 class Size(object):
     """defined size of object"""
@@ -16,16 +16,15 @@ class Size(object):
 class Position(object):
     """Basic 2d position in space"""
 
-    def __init__(self,posx,posy):
+    def __init__(self, posx, posy):
         self.posX = posx
         self.posY = posy
-
 
 
 class StarshipType(object):
     """defined type of starship"""
 
-    def __init__(self,name, description, fighting_square):
+    def __init__(self, name, description, fighting_square):
         self.name = name
         self.description = description
         self.fightingSquare = fighting_square
@@ -79,27 +78,27 @@ class Weapon(object):
 class Starship(object):
     """this is a starship object"""
 
-    def __init__(self, name, description, StarshipType, Size, Hull, Armor, Weapon, Crew, Position, base_speed):
+    def __init__(self, name, description, starship_type, size, hull, armor, weapon, crew, position, base_speed):
         self.name = name
         self.description = description
-        self.starshipType = StarshipType
-        self.size = Size
-        self.hull = Hull
-        self.armor = Armor
-        self.weapon = Weapon
-        self.crew = Crew
-        self.position = Position
+        self.starshipType = starship_type
+        self.size = size
+        self.hull = hull
+        self.armor = armor
+        self.weapon = weapon
+        self.crew = crew
+        self.position = position
         self.baseSpeed = base_speed
 
 
 equipage = Crew("ace", 4, 5, 2, 4, 23)
-atype= StarshipType("lightweight","un genre de petit vaisseau",1)
-taille = Size("huge",-2,5,6,64,256000)
-place= Position(0,0)
+atype = StarshipType("lightweight", "un genre de petit vaisseau", 1)
+taille = Size("huge", -2, 5, 6, 64, 256000)
+place = Position(0, 0)
 ahull = Hull("vanadium hull", "this is a basic hull", 50, )
 armortst = Armor("tiberium", "this tiberium armor is blabla", 30, 0.4, -3)
-arme= Weapon("blaster","classic starwars blaster cannon",42,19,"energy",2,1,taille,11)
-falcon = Starship("millenium", "the fastest", atype,taille, ahull, armortst,arme, equipage, place, 6)
+arme = Weapon("blaster", "classic starwars blaster cannon", 42, 19, "energy", 2, 1, taille, 11)
+falcon = Starship("millenium", "the fastest", atype, taille, ahull, armortst, arme, equipage, place, 6)
 print(falcon.armor.name)
-print(falcon.crew.quality,falcon.starshipType.description,falcon.weapon.name)
+print(falcon.crew.quality, falcon.starshipType.description, falcon.weapon.name)
 print(falcon.baseSpeed)
