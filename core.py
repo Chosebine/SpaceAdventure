@@ -73,7 +73,7 @@ class Starship(object):
     def __init__(self, name, description, StarshipType, Size, Hull, Armor, Weapon, equip, posx, posy,base_speed):
         self.name = name
         self.description = description
-        self.starshiptype = StarshipType
+        self.starshipType = StarshipType
         self.size = Size
         self.hull = Hull
         self.armor = Armor
@@ -92,4 +92,4 @@ armortst = Armor("tiberium", "this tiberium armor is blabla", 30, 0.4, -3)
 arme= Weapon("blaster","classic starwars blaster cannon",42,19,"energy",2,1,taille,11)
 falcon = Starship("millenium", "the fastest", atype,taille, ahull, armortst,arme, equipage, 0, 0,6)
 print(falcon.armor.name)
-print(falcon.equip.quality,falcon.starshiptype.description,falcon.weapon.name)
+print(falcon.equip.quality,falcon.starshipType.description,falcon.weapon.name)
