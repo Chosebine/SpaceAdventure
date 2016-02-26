@@ -42,6 +42,19 @@ class Crew(object):
         self.price = price
 
 
+class BasicInfo(object):
+    """Starship basic info"""
+
+    def __init__(self, name, description, starship_type, starship_subtype, size, crew, base_speed):
+        self.name = name
+        self.description = description
+        self.starshipType = starship_type
+        self.starshipSubtype = starship_subtype
+        self.size = size
+        self.crew = crew
+        self.baseSpeed = base_speed
+
+
 class Hull(object):
     """the hull part of a starship"""
 
@@ -75,19 +88,6 @@ class Weapon(object):
         self.price = price
 
 
-class BasicInfo(object):
-    """Starship basic info"""
-
-    def __init__(self, name, description, starship_type, starship_subtype, size, crew, base_speed):
-        self.name = name
-        self.description = description
-        self.starshipType = starship_type
-        self.starshipSubtype = starship_subtype
-        self.size = size
-        self.crew = crew
-        self.baseSpeed = base_speed
-
-
 class Starship(object):
     """this is a starship object"""
 
@@ -97,8 +97,3 @@ class Starship(object):
         self.armor = armor
         self.weapon = weapon
         self.position = position
-
-
-"""print(falcon.armor.name)
-print(falcon.crew.quality, falcon.starshipType.description, falcon.weapon.name)
-print(falcon.baseSpeed)"""
