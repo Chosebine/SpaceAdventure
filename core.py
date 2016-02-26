@@ -67,12 +67,12 @@ class Hull(object):
 class Armor(object):
     """the armor part of a starship"""
 
-    def __init__(self, name, description, hardness, weight, speed_penality):
+    def __init__(self, name, description, hardness, weight, speed_penalty):
         self.name = name
         self.description = description
         self.hardness = hardness
         self.weight = weight
-        self.speedPenality = speed_penality
+        self.speedPenalty = speed_penalty
 
 
 class Weapon(object):
