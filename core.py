@@ -74,10 +74,11 @@ class Weapon(object):
         self.minShipSize = min_ship_size
         self.price = price
 
+
 class BasicInfo(object):
     """Starship basic info"""
 
-    def __init__(self,name, description, starship_type, starship_subtype, size, crew, base_speed):
+    def __init__(self, name, description, starship_type, starship_subtype, size, crew, base_speed):
         self.name = name
         self.description = description
         self.starshipType = starship_type
@@ -91,14 +92,11 @@ class Starship(object):
     """this is a starship object"""
 
     def __init__(self, basic_info, hull, armor, weapon, position):
-        self.name = name
         self.basicInfo = basic_info
         self.hull = hull
         self.armor = armor
         self.weapon = weapon
-        self.crew = crew
         self.position = position
-        self.baseSpeed = base_speed
 
 
 """print(falcon.armor.name)
