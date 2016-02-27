@@ -2,8 +2,16 @@ import core
 import sqlite3
 conn = sqlite3.connect('space.db')
 c = conn.cursor()
-purchases = [('2006-03-28', 'BUY', 'IBM', 1000, 45.00),
-             ('2006-04-05', 'BUY', 'MSFT', 1000, 72.00),
-             ('2006-04-06', 'SELL', 'IBM', 500, 53.00),
+c.execute('''CREATE TABLE IF NOT EXISTS size
+             (name text, sizeModif integer, targetingSys integer, autopilot integer, length real, weight real)''')
+
+
+sizes = [('Huge', -2, 1,1, 32,32000),
+             ('Gargantuan', -4, 2,2, 64,25000),
+             ('Colossal', -8, 3,3, 256,1000000),
             ]
-c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
+#c.executemany('INSERT INTO size VALUES (?,?,?,?,?,?)', sizes)
+c.execute('SELECT * FROM size')
+print(c.fetchall())
+conn.commit()
+conn.close()
