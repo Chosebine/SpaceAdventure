@@ -28,13 +28,14 @@ starshiptypes = [('Ultralight', 'An ultralight starship can be up to 250 feet lo
                                 'have a 2,000-foot-by-2,000-foot fighting space (16 500-foot squares), '
                                 'although larger fighting spaces are possible.', 16),
                  ]
-# c.executemany('INSERT INTO starshipType VALUES (?,?,?)', starshiptypes)
+#c.executemany('INSERT INTO starshipType VALUES (?,?,?)', starshiptypes)
 c.execute('SELECT * FROM size')
 print(c.fetchall())
-# for a in range(c.arraysize):
+
 
 c.execute('SELECT * FROM starshipType')
-
-print(c.fetchone())
+a = c.fetchall()
+for b in a:
+    print(b)
 conn.commit()
 conn.close()
