@@ -58,10 +58,11 @@ class BasicInfo(object):
 class Hull(object):
     """the hull part of a starship"""
 
-    def __init__(self, name, description, hit_point):
+    def __init__(self, name, description, hit_point, price):
         self.name = name
         self.description = description
         self.hitPoint = hit_point
+        self.price = price
 
 
 class Armor(object):
@@ -91,9 +92,10 @@ class Weapon(object):
 class Starship(object):
     """this is a starship object"""
 
-    def __init__(self, basic_info, hull, armor, weapon, position):
+    def __init__(self, basic_info, hull, armor, weapon, position, price):
         self.basicInfo = basic_info
         self.hull = hull
         self.armor = armor
         self.weapon = weapon
         self.position = position
+        self.price = price

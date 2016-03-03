@@ -9,6 +9,23 @@ c.execute('''CREATE TABLE IF NOT EXISTS size
 c.execute('''CREATE TABLE IF NOT EXISTS starshipType
              (name text, description text, fightingSquare real)''')
 
+c.execute('''CREATE TABLE IF NOT EXISTS crew
+             (quality text, skill integer, defense integer, dexterity integer, attack integer, price integer)''')
+
+
+c.execute('''CREATE TABLE IF NOT EXISTS hull
+             (name text, description text, hitPoint integer, price integer)''')
+
+
+c.execute('''CREATE TABLE IF NOT EXISTS armor
+             (name text, description text, hardness integer, weight integer, speedPenalty integer, price integer)''')
+
+c.execute('''CREATE TABLE IF NOT EXISTS weapon
+             (name text, description text, damage integer, crit integer, dmgType text, wpnRange integer, rof text,
+             minShipsize text, price text)''')
+
+
+
 sizes = [('Huge', -2, 1, 1, 32, 32000),
          ('Gargantuan', -4, 2, 2, 64, 25000),
          ('Colossal', -8, 3, 3, 256, 1000000),
