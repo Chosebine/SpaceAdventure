@@ -4,25 +4,28 @@ import sqlite3
 conn = sqlite3.connect('space.db')
 c = conn.cursor()
 c.execute('''CREATE TABLE IF NOT EXISTS size
-             (name text, sizeModif integer, targetingSys integer, autopilot integer, length real, weight real)''')
+             (numId integer PRIMARY KEY, name text, sizeModif integer, targetingSys integer, autopilot integer,
+              length real, weight real)''')
 
 c.execute('''CREATE TABLE IF NOT EXISTS starshipType
-             (name text, description text, fightingSquare real)''')
+             (numId integer PRIMARY KEY, name text, description text, fightingSquare real)''')
 
 c.execute('''CREATE TABLE IF NOT EXISTS crew
-             (quality text, skill integer, defense integer, dexterity integer, attack integer, price integer)''')
+             (numId integer PRIMARY KEY, quality text, skill integer, defense integer, dexterity integer,
+              attack integer, price integer)''')
 
 
 c.execute('''CREATE TABLE IF NOT EXISTS hull
-             (name text, description text, hitPoint integer, price integer)''')
+             (numId integer PRIMARY KEY, name text, description text, hitPoint integer, price integer)''')
 
 
 c.execute('''CREATE TABLE IF NOT EXISTS armor
-             (name text, description text, hardness integer, weight integer, speedPenalty integer, price integer)''')
+             (numId integer PRIMARY KEY, name text, description text, hardness integer, weight integer,
+              speedPenalty integer, price integer)''')
 
 c.execute('''CREATE TABLE IF NOT EXISTS weapon
-             (name text, description text, damage integer, crit integer, dmgType text, wpnRange integer, rof text,
-             minShipsize text, price text)''')
+             (numId integer PRIMARY KEY, name text, description text, damage integer, crit integer, dmgType text,
+              wpnRange integer, rof text, minShipsize text, price text)''')
 
 
 
@@ -45,7 +48,7 @@ starshiptypes = [('Ultralight', 'An ultralight starship can be up to 250 feet lo
                                 'have a 2,000-foot-by-2,000-foot fighting space (16 500-foot squares), '
                                 'although larger fighting spaces are possible.', 16),
                  ]
-#c.executemany('INSERT INTO starshipType VALUES (?,?,?)', starshiptypes)
+#c.executemany('INSERT INTO starshipType (name,description,fightingSquare) VALUES (?,?,?)', starshiptypes)
 c.execute('SELECT * FROM size')
 print(c.fetchall())
 
